@@ -1,18 +1,25 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
-
-Note: This will impact Vite dev & build performances.
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+2. React Router를 사용한 맛집 정보 앱
+요구사항
+페이지 구성
+1. / → 홈 페이지: "맛집 추천" 출력
+2. /restaurants → 맛집 목록 페이지 (맛집 이름, 위치, 평점 출력)
+3. 각 맛집 이름 클릭 시 상세 페이지 이동
+/restaurants/:id → 맛집 상세 페이지
+4. URL 파라미터(id)로 해당 맛집 정보 표시
+정보: 이름, 위치, 평점, 메뉴, 전화번호
+<링크>
+5. 홈→ 맛집 목록 이동 링크
+6. 상세 페이지 → 목록 페이지 돌아가기 링크
+ex)
+const restaurants =
+[ { id: 1, name: "맛있는 집", location: "서울", rating: 4.5, menu: "김치찌개, 불고
+기",
+phone: "010-1111-2222" },
+{ id: 2, name: "행복한 밥상", location: "부산", rating: 4.2, menu: "비빔밥, 된장찌
+개",
+phone: "010-3333-4444" },
+{ id: 3, name: "즐거운 식탁", location: "대구", rating: 4.8, menu: "삼겹살, 냉면",
+phone:
+"010-5555-6666" }, ];
+7. 잘못된 ID 접근 시 "맛집을 찾을 수 없습니다" 표시
